@@ -85,6 +85,10 @@ useEffect(()=>{
           title: 'Home',
         },
         {
+          href: '/',
+          title: 'Our Library',
+        },
+        {
           href: '/all-categories',
           title: 'All Categories',
           submenu: [
@@ -164,12 +168,12 @@ useEffect(()=>{
                     <div className="container flex items-center justify-between">
 
                         <div className="flex items-center justify-between gap-4 h-full relative">
-                            <button className="flex items-center gap-1 text-sm text-gray-600 hidden md:block">
+                            <button className="flex items-center gap-1 text-sm text-gray-600 hidden md:flex">
                                 <BsEnvelope/>
                                 contact
                             </button>
 
-                            <button className="flex items-center gap-1 text-sm text-gray-600 hidden md:block">
+                            <button className="flex items-center gap-1 text-sm text-gray-600 hidden md:flex">
                                 <IoMdHelpCircleOutline/>
                                 help
                             </button>
@@ -237,7 +241,7 @@ useEffect(()=>{
                                 <div className="relative">
                                   <button className="flex items-center gap-1" onClick={()=>setWishlistDropdown((prev) => !prev)} >
                                     <AiOutlineHeart className="text-2xl"/> 
-                                    <span className="text-sm">Wishlist</span>
+                                    <span className="text-sm hidden md:block">Wishlist</span>
                                   </button>
 
                                   <div className={`border-t-2 border-[#77b748] w-[330px] z-10 cartdropdown bg-white   p-[15px] mt-5 ${wishlistdropdown ? "show" : ""}`}   >
@@ -269,7 +273,7 @@ useEffect(()=>{
                                     {/* <GiShoppingCart/> */}
 
                                       <AiOutlineShoppingCart className="text-2xl"/>
-                                      <span className="text-sm">$576.09</span>
+                                      <span className="text-sm hidden md:block">$576.09</span>
                                     </button>
 
                                     <div className={`border-t-2 border-rose-500 w-[330px] cartdropdown bg-white   p-[15px] mt-8 ${cartdropdown ? "show" : ""}`}   >
@@ -363,7 +367,7 @@ useEffect(()=>{
                       
 
 
-                          <div className="bg-white absolute top-full z-10 w-full">
+                          <div className="bg-white absolute top-full z-10 w-full hidden">
                             <div className="container">
 
                               heyy

@@ -17,7 +17,7 @@ const BannerTwo = () => {
                             </div>
 
                             <div className="mt-6 lg:mt-0 z-10 w-full lg:w-1/6 z-10">
-                            <a href="" className="w-36 md:w-full rounded-md h-12  text-white/100 mt-2 flex items-center justify-center transition delay-100 ease-in-out duration-300 border border-gray-400 bg-blue-400 hover:text-white hover:border-blue-400 z-10">Read More</a>
+                            <a href="" className="w-36 md:w-full rounded-md h-12  text-white/100 mt-2 flex items-center justify-center transition delay-100 ease-in-out duration-300 border border-blue-400 bg-blue-400 hover:text-white hover:border-blue-400 z-10">Read More</a>
                             </div>
 
                     </div>

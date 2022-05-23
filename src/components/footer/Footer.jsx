@@ -24,7 +24,7 @@ const Footer = () => {
 
 
                     
-                    <p className="max-w-md mt-2 text-gray-500 dark:text-gray-400">A DeFi platform that helps you save in stable currencies</p>
+                    <p className="max-w-md mt-2 text-gray-500 dark:text-gray-400">A Online platform for buying and selling of books and materials to anywhere in the world</p>
                     
                     <div className="flex mt-4 -mx-2">
                         <a href="#" className="mx-2 text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400" aria-label="Linkden">
@@ -48,19 +48,19 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="mt-6 lg:mt-0 lg:flex-1">
+            <div className="mt-7 lg:mt-0 lg:flex-1">
                 <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
                     <div>
                         <h3 className="text-gray-700 uppercase dark:text-white">Products</h3>
-                        <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Send & Recieve</a>
-                        <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">piggyfi for Business</a>
-                        <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Save & Earn</a>
+                        <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Our Policy</a>
+                        <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Terms of order</a>
+                        <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Terms of return</a>
                     </div>
 
                     <div>
                         <h3 className="text-gray-700 uppercase dark:text-white">Company</h3>
                         <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">FaQs</a>
-                        <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">How it works</a>
+                        <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">How we works</a>
                         <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Videos</a>
                     </div>
 

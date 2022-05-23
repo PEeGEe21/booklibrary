@@ -82,8 +82,8 @@ const Hero = () => {
                                                 <p>{item.desc}</p>
                                             </div>
                                             <div className="flex items-center">
-                                                <button className="p-3 px-4 text-sm text-white h-12 w-1/3 border border-[#77b748] mr-4 ">Read More</button>
-                                                <button className="bg-[#77b748] text-sm text-white rounded-md p-3 px-4 w-1/3 h-12 ">Buy Now</button>
+                                                <button className="p-3 px-4 text-sm text-white h-12 w-full lg:w-1/3 border border-[#77b748] mr-4 ">Read More</button>
+                                                <button className="bg-[#77b748] text-sm text-white rounded-md p-3 px-4 w-full lg:w-1/3 h-12 ">Buy Now</button>
                                             </div>
                 
                                         </div>
