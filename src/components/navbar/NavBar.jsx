@@ -164,12 +164,12 @@ useEffect(()=>{
                     <div className="container flex items-center justify-between">
 
                         <div className="flex items-center justify-between gap-4 h-full relative">
-                            <button className="flex items-center gap-1 text-sm text-gray-600">
+                            <button className="flex items-center gap-1 text-sm text-gray-600 hidden md:block">
                                 <BsEnvelope/>
                                 contact
                             </button>
 
-                            <button className="flex items-center gap-1 text-sm text-gray-600">
+                            <button className="flex items-center gap-1 text-sm text-gray-600 hidden md:block">
                                 <IoMdHelpCircleOutline/>
                                 help
                             </button>
