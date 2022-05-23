@@ -54,6 +54,13 @@
   }
 }
 
+@media (max-width: 568px) {
+.pop_author > :first-child {
+  /* width: auto; */
+  height: 160px;
+  }
+}
+
 
 .pop_author:hover > :first-child{
   box-shadow: 5px 5px 10px #ccc;

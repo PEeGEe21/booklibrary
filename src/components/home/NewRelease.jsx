@@ -36,8 +36,13 @@ const NewRelease = () => {
                                             {/* <LikeButton /> */}
                                         {/* </div> */}
                                     {/* <button className="wish-button"><AiOutlineHeart className="w-full h-full"/></button> */}
-                                            <a href="" className="new-book-container">
+                                            {/* <a href="" className="new-book-container">
                                                 <div className="new-book">
+                                                    <img src={`${book.image}`} alt="" className="w-full"/>
+                                                </div>
+                                            </a> */}
+                                            <a href="" className="book-container">
+                                                <div className="book">
                                                     <img src={`${book.image}`} alt="" className="w-full"/>
                                                 </div>
                                             </a>
