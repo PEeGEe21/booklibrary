@@ -1,0 +1,44 @@
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+  
+  .category-icon {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    font-size: 30px;
+    line-height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    /* background: #93648d; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .category-icon svg {
+    font-size: 30px;
+  }
+  
+  .category-title {
+    font-size: 22px;
+    /* color: #643b5f; */
+  }
+  
+  .category-number {
+    font-size: 16px;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .category-number {
+      text-align: center;
+    }
+  }
+  

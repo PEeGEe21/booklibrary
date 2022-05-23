@@ -1,0 +1,234 @@
+.hero-content {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  padding: 0 14% 0 60px;
+  /* height: 100%; */
+}
+
+.hero-content h1 {
+  margin: 0;
+  color: #fff;
+  width: 100%;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 65px;
+  text-transform: uppercase;
+}
+
+.hero-content .tg-description {
+  color: #fff;
+}
+
+.hero-content .tg-description {
+  padding: 30px 0;
+}
+
+.slider.testimonial .owl-carousel .owl-nav button.owl-prev,
+.slider.testimonial .owl-carousel .owl-nav button.owl-next,
+.slider.testimonial .owl-carousel button.owl-dot {
+  background: none;
+}
+
+.slider .owl-nav .owl-prev,
+.slider .owl-nav .owl-next {
+  transition: all 0.5s !important;
+}
+
+.slider .owl-nav .owl-prev:hover,
+.slider .owl-nav .owl-next:hover {
+  transition: all 0.5s !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.slider .owl-nav .owl-prev:focus-visible,
+.slider .owl-nav .owl-next:focus-visible {
+    border: none;
+    outline: none;
+
+}
+
+.slider .owl-nav .owl-prev,
+.slider .owl-nav .owl-next {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  min-width: 70px;
+  min-height: 70px;
+  position: absolute;
+  display: block;
+  z-index: 100;
+  border-radius: 35px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3) !important;
+
+  top: 40%;
+
+  /* transform: matrix(1, 0, 0, 1, -90, -35); */
+  /* left: 100%; */
+}
+
+.slider .owl-nav .owl-next span,
+.slider .owl-nav .owl-prev span {
+  font-size: 24px !important;
+  color: #fff;
+  display: block;
+  line-height: 70px;
+  z-index: 2;
+  position: relative;
+}
+
+.slider .owl-nav .owl-prev {
+  left: 0px;
+  transition: left 300ms ease-out;
+}
+.slider .owl-nav .owl-next {
+  right: 0px;
+  transition: right 300ms ease-out;
+}
+
+@media only screen and (max-width: 568px) {
+  .slider .owl-nav .owl-next span,
+  .slider .owl-nav .owl-prev span {
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .slider .owl-nav .owl-prev,
+  .slider .owl-nav .owl-next {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    min-width: 50px;
+    min-height: 50px;
+
+    /* transform: matrix(1, 0, 0, 1, -90, -35); */
+    /* left: 100%; */
+  }
+}
+
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
+  display: block;
+}
+
+
+
+
+.hero-book-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 600px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+
+@keyframes initAnimation{
+    0%{
+        transform: rotateY(0deg);
+    }
+
+    25%{
+        transform: rotateY(0deg);
+    }
+
+    50%{
+        transform: rotateY(-30deg);
+    }
+
+    75%{
+        transform: rotateY(0deg);
+    }
+
+    100%{
+        transform: rotateY(-30deg);
+    }
+}
+
+.hero-book{
+    width: 250px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: 1s ease;
+    animation: 6s ease 400ms initAnimation infinite;
+    animation-direction: alternate;
+
+
+
+}
+
+.hero-content .hero-book:hover{
+    transform: rotateY(0deg);
+}
+
+.hero-book > :first-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    width: 250px;
+    height: 350px;
+    transform: translateZ(25px);
+    background-color: #01060f;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 5px 5px 10px #ccc;
+
+}
+
+.hero-book::before{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    opacity: .6;
+    left: 0;
+    top: 3px;
+    width: 48px;
+    height: 340px;
+    transform: translateX(220px) rotateY(90deg);
+    background-color: linear-gradient(90deg, 
+    #fff 0%,
+    #f9f9f9 5%,
+    #fff 10%,
+    #f9f9f9 15%,
+    #fff 20%,
+    #f9f9f9 25%,
+    #fff 30%,
+    #f9f9f9 35%,
+    #fff 40%,
+    #f9f9f9 45%,
+    #fff 50%,
+    #f9f9f9 55%,
+    #fff 60%,
+    #f9f9f9 65%,
+    #fff 70%,
+    #f9f9f9 75%,
+    #fff 80%,
+    #f9f9f9 85%,
+    #fff 90%,
+    #f9f9f9 95%,
+    #fff 100%,
+    
+    );
+}
+
+.hero-book::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 250px;
+    height: 350px;
+    transform: translateZ(-25px);
+    background-color: #01060f;
+    border-radius: 0 2px 2px 0;
+    box-shadow: -5px 0 30px 10px #ccc;
+}
+
+
+
