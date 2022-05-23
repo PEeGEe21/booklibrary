@@ -15,6 +15,7 @@ const NavBar = () => {
 const [currencydropdown, setCurrencyDropdown] = useState(false);
 const [wishlistdropdown, setWishlistDropdown] = useState(false);
 const [cartdropdown, setCartDropdown] = useState(false);
+const [mobileDropdown, setMobileDropdown] = useState(false);
 const ref = useRef();
 const cartref = useRef();
 const user = 'Praise';
@@ -357,7 +358,7 @@ useEffect(()=>{
                     </div>
                     <div className="flex md:hidden relative">
                       <div className="container">
-                        <button type="button" className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400 my-4 bg-white border-gray-300 text-lg" aria-label="toggle menu" >
+                        <button type="button" className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400 my-4 bg-white border-gray-300 text-lg px-1 rounded-md" aria-label="toggle menu" onClick={()=>setMobileDropdown((prev) => !prev)} >
                               <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
                                   <path fillRule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
                               </svg>
@@ -367,10 +368,19 @@ useEffect(()=>{
                       
 
 
-                          <div className="bg-white absolute top-full z-10 w-full hidden">
-                            <div className="container">
+                          <div className={` mobileDropdown absolute top-full z-10 w-full ${mobileDropdown ? "active" : ""}`}>
+                            <div className="container py-4 relative bg-white">
 
-                              heyy
+                              <nav>
+
+                              <ul className="">
+                                  {menuItems.map((items, index)=>(
+                                      // const depthLevel = 0;
+                                      <li><a>{items.title}</a></li>
+                                  ))}
+
+                              </ul>
+                              </nav>
                             </div>
                           </div>
                       </div>

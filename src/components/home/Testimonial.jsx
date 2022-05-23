@@ -27,7 +27,7 @@ const Testimonial = () => {
             id: '1',
             image: '/users/300_6.jpg',
             work: 'Senior Developer, Microsoft',
-            review: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae soluta placeat atque dolorem molestias quas accusantium porro odit dicta, suscipit inventore quidem facere, minus perspiciatis magnam ipsum repellendus nesciunt expedita recusandae incidunt minima a. Perferendis, ipsam distinctio? Beatae, sed eius repellat porro, laborum quam reiciendis animi eveniet possimus ab doloribus.',
+            review: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae soluta placeat atque dolorem molestias quas accusantium porro odit dicta, suscipit inventore quidem facere, minus perspiciatis magnam ipsum repellendus nesciunt expedita',
             author: 'Chezuz Perez',
         },
         {

@@ -112,7 +112,7 @@ const Footer = () => {
     </div>
 
     <div className="bottom-footer py-[20px] bg-[#484848] text-white">
-            <p className="text-center text-white dark:text-white">BookLibrary © {currentYear}. Designed and Developed by <a href="https://peegee.netlify.app" className="underline">Peegee</a></p>
+            <p className="text-center text-white dark:text-white">BookLibrary © {currentYear}. Built by <a href="https://peegee.netlify.app" className="underline">Peegee</a></p>
         </div>
 </footer>
 </>

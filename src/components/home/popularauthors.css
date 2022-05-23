@@ -47,6 +47,14 @@
 
 }
 
+@media (max-width: 640px) {
+.pop_author > :first-child {
+  /* width: auto; */
+  height: 180px;
+  }
+}
+
+
 .pop_author:hover > :first-child{
   box-shadow: 5px 5px 10px #ccc;
   transition: all 0.4s ease;

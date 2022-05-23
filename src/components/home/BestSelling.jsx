@@ -21,7 +21,7 @@ const numberofStars = () =>{
     <>
         <section className="sectionspace">
             <div className="container">
-                <div className="border-b flex items-center justify-between flex-row pb-6">
+                <div className="border-b flex items-center justify-between flex-row flex-wrap pb-6">
                     <div className="flex flex-col justify-start">
                         <h5 className="mb-2 text-sm">Get our best selling</h5>
                         <h1 className="text-2xl">Our Best Sellling Books</h1>
