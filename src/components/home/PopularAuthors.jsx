@@ -74,7 +74,7 @@ const PopularAuthors = () => {
                                     </a>
                                     
 
-                                    <div className="px-2 py-4 flex flex-col gap-2 text-center mt-4">
+                                    <div className="px-2 py-4 flex flex-col gap-2 text-center mt-2">
 
                                         <a href="">
                                             <span className="book-title text-gray-900 text-lg mb-2">{author.name}</span>

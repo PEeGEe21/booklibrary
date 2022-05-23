@@ -27,7 +27,7 @@ const numberofStars = () =>{
                         <h1 className="text-2xl">Our Best Sellling Books</h1>
                     </div>
 
-                    <div>
+                    <div className="mt-3 lg:mt-0">
                         <a href="" className="rounded-full border p-3 px-5 text-sm w-full text-black">View All</a>
                     </div>
                 </div>
