@@ -36,16 +36,16 @@ const NewRelease = () => {
                                             {/* <LikeButton /> */}
                                         {/* </div> */}
                                     {/* <button className="wish-button"><AiOutlineHeart className="w-full h-full"/></button> */}
-                                            {/* <a href="" className="new-book-container">
+                                            <a href="" className="new-book-container">
                                                 <div className="new-book">
                                                     <img src={`${book.image}`} alt="" className="w-full"/>
                                                 </div>
-                                            </a> */}
-                                            <a href="" className="book-container">
+                                            </a>
+                                            {/* <a href="" className="book-container">
                                                 <div className="book">
                                                     <img src={`${book.image}`} alt="" className="w-full"/>
                                                 </div>
-                                            </a>
+                                            </a> */}
                                             <div className="px-2 py-1 flex flex-row gap-2 flex-wrap border-b">
                                                 
                                                 <span className="cat py-1 text-xs font-semibold text-gray-700 mr-1">Fun</span>
