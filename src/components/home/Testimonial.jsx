@@ -82,7 +82,7 @@ const Testimonial = () => {
                                             </div>
                                            
                                                 
-                                                <hr className="h-[0.25px] w-1/4 my-6 bg-gray-300 border-none dark:bg-gray-200 mx-auto "/> 
+                                                <hr className="h-[0.25px] w-1/4 my-6 bg-gray-300 border-none  mx-auto "/> 
                                             <div className="pt-4 testimonial_author">
                                                 <h3 className="pb-2">{item.author}</h3>
                                                 <span className="mt-2">{item.work}</span>

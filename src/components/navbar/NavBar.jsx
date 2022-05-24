@@ -209,7 +209,7 @@ useEffect(()=>{
                             </button>
 
                           <div className="relative h-full">
-                            <button className="flex items-center gap-1 relative z-10 p-2 mr-2 text-sm text-gray-600  border border-transparent rounded-md dark:text-white dark:bg-gray-800 focus:outline-none hover:bg-gray-100 transition delay-100 ease-in-out duration-100 " onClick={()=>setCurrencyDropdown((prev) => !prev)} ref={ref}  >
+                            <button className="flex items-center gap-1 relative z-10 p-2 mr-2 text-sm text-gray-600  border border-transparent rounded-md focus:outline-none hover:bg-gray-100 transition delay-100 ease-in-out duration-100 " onClick={()=>setCurrencyDropdown((prev) => !prev)} ref={ref}  >
                                 <IoMdGlobe/>
                                 currency <i className="fa fa-angle-down text-[9px] ml-2"></i>
                             </button>
@@ -228,7 +228,7 @@ useEffect(()=>{
                         </div>
 
                         <div>
-                            {user ? <button type="button" className="relative z-10 flex items-center p-2 px-4 text-sm text-gray-600  border border-transparent  dark:text-white dark:bg-gray-800 focus:outline-none bg-gray-100">
+                            {user ? <button type="button" className="relative z-10 flex items-center p-2 px-4 text-sm text-gray-600  border border-transparent focus:outline-none bg-gray-100">
                                     <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
                                         <img src="/avatar-1.png" className="object-cover w-full h-full" alt="avatar"/>
                                         {/* <img src="" alt="" /> */}
@@ -238,7 +238,7 @@ useEffect(()=>{
 
                             </button>
                             : 
-                            <Link to="/login" className="relative z-10 flex items-center p-2 px-4 text-sm text-gray-600  border border-transparent  dark:text-white dark:bg-gray-800 focus:outline-none bg-gray-100">
+                            <Link to="/login" className="relative z-10 flex items-center p-2 px-4 text-sm text-gray-600  border border-transparent  focus:outline-none bg-gray-100">
 
                                     <span className=" h-8 overflow-hidden flex items-center">Login / SignUp</span>
 
@@ -262,7 +262,7 @@ useEffect(()=>{
 
                             <div className="w-[50%] hidden md:block">
                                 <form className="rounded-md flex items-center justify-center border border-gray-300 h-[50px]">
-                                    <input type="text" placeholder="search author, title" className="text-sm h-full block w-full px-4 py-2 text-gray-700 bg-white border-0 border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300  focus:outline-none" />
+                                    <input type="text" placeholder="search author, title" className="text-sm h-full block w-full px-4 py-2 text-gray-700 bg-white border-0 border-gray-200 rounded-md dark:text-gray-300  focus:outline-none" />
                                     <button className="px-6 py-2 leading-5 text-md text-white transition-colors duration-200 transform  rounded-sm focus:outline-none  h-full border-0" type="submit"><BsSearch className="h-full text-gray-400"/></button>
                                 </form>
                             </div>
@@ -366,7 +366,7 @@ useEffect(()=>{
 
                         <div className="w-full block md:hidden mt-6">
                                 <form className="rounded-md flex items-center justify-center border border-gray-300 h-[50px]">
-                                    <input type="text" placeholder="search author, title" className="text-sm h-full block w-full px-4 py-2 text-gray-700 bg-white border-0 border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300  focus:outline-none" />
+                                    <input type="text" placeholder="search author, title" className="text-sm h-full block w-full px-4 py-2 text-gray-700 bg-white border-0 border-gray-200 rounded-md  focus:outline-none" />
                                     <button className="px-6 py-2 leading-5 text-md text-white transition-colors duration-200 transform  rounded-sm focus:outline-none  h-full border-0" type="submit"><BsSearch className="h-full text-gray-400"/></button>
                                 </form>
                             </div>
@@ -387,7 +387,7 @@ useEffect(()=>{
                     </div>
                     <div className="flex md:hidden relative">
                       <div className="container">
-                        <button type="button" className={`text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400 my-4 bg-white border-gray-300 text-lg px-1 rounded-md mobile-menu-btn ${mobileDropdown ? "open" : ""}`} aria-label="toggle menu" onClick={()=>setMobileDropdown((prev) => !prev)} >
+                        <button type="button" className={`text-gray-500  hover:text-gray-600 focus:outline-none focus:text-gray-600 my-4 bg-white border-gray-300 text-lg px-1 rounded-md mobile-menu-btn ${mobileDropdown ? "open" : ""}`} aria-label="toggle menu" onClick={()=>setMobileDropdown((prev) => !prev)} >
                               {/* <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current">
                                   <path fillRule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
                               </svg> */}

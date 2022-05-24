@@ -16,7 +16,7 @@ const NewRelease = () => {
                                     <h1 className="text-2xl">Our Latest Release</h1>
                                 </div>
                         </div>
-                        <p className="w-full my-3 py-4 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio incidunt ullam reprehenderit voluptatibus aspernatur sed. Alias consequatur in tempore nam temporibus fuga sunt, molestiae magni!</p>
+                        <p className="w-full my-3 py-4 text-gray-500 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio incidunt ullam reprehenderit voluptatibus aspernatur sed. Alias consequatur in tempore nam temporibus fuga sunt, molestiae magni!</p>
 
                         <div className="flex items-center">
                             <button className="bg-gray-700 text-white p-3 mr-3">Read Now</button>
