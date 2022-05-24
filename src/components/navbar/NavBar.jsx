@@ -387,10 +387,13 @@ useEffect(()=>{
                     </div>
                     <div className="flex md:hidden relative">
                       <div className="container">
-                        <button type="button" className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400 my-4 bg-white border-gray-300 text-lg px-1 rounded-md " aria-label="toggle menu" onClick={()=>setMobileDropdown((prev) => !prev)} >
-                              <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current">
+                        <button type="button" className={`text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400 my-4 bg-white border-gray-300 text-lg px-1 rounded-md mobile-menu-btn ${mobileDropdown ? "open" : ""}`} aria-label="toggle menu" onClick={()=>setMobileDropdown((prev) => !prev)} >
+                              {/* <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current">
                                   <path fillRule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                              </svg>
+                              </svg> */}
+                              <div className="bar-one"></div>
+                              <div className="bar-two"></div>
+                              <div className="bar-three"></div>
                           </button>
                       </div>
 

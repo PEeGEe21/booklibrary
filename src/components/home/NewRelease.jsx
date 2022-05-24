@@ -27,7 +27,7 @@ const NewRelease = () => {
                     </div>
 
                     <div className="mt-6 lg:mt-0 lg:flex-1">
-                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3">
+                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-3">
                         
                         {NewReleaseBooks.sort(()=>Math.round(Math.random() * 1000)).slice(0, 3).map((book, index)=>(
                                         <div className=" new-singlebook relative rounded overflow-hidden  " key={book.id}>
@@ -53,7 +53,7 @@ const NewRelease = () => {
                                                 <span className="py-1 text-xs font-semibold text-gray-700 mr-1">Horror</span>
                                             </div>
 
-                                            <div className="px-2 py-4 mb-4 flex flex-col gap-2">
+                                            <div className="px-2 py-4 mb-4 flex flex-col gap-2 text-left">
                                                 
                                                 {/* <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">Photography</span>
 

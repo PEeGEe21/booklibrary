@@ -28,7 +28,7 @@ const BannerOne = () => {
 
                             </div>
 
-                            <div className="flex flex-col pl-3">
+                            <div className="flex flex-col pl-0 md:pl-3">
                                 <a href=""><span className="category-title text-[#f16745]">Horror</span></a>
                                 
                                 <span className="category-number"> <CountUp start={0} end={5903} delay={3} duration={100}/> </span>
@@ -41,7 +41,7 @@ const BannerOne = () => {
 
                             </div>
 
-                            <div className="flex flex-col pl-3">
+                            <div className="flex flex-col pl-0 md:pl-3">
                                 <a href=""><span className="category-title text-[#77b748]">Comedy</span></a>
                                 <span className="category-number">5930023</span>
                             </div>
@@ -53,7 +53,7 @@ const BannerOne = () => {
 
                             </div>
 
-                            <div className="flex flex-col pl-3">
+                            <div className="flex flex-col pl-0 md:pl-3">
                                 <a href=""><span className="category-title text-[#4cc3d9]">Science</span></a>
                                 <span className="category-number">5930023</span>
                             </div>

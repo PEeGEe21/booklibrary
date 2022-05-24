@@ -74,15 +74,15 @@ const PopularAuthors = () => {
                                     </a>
                                     
 
-                                    <div className="px-2 py-4 flex flex-col gap-2 text-center mt-0 lg:mt-2">
-
+                                    <div className="px-2 py-2 mb-4 md:py-4 flex flex-col gap-2 text-center mt-0 lg:mt-2">
+ 
                                         <a href="">
                                             <span className="book-title text-gray-900 text-lg mb-2">{author.name}</span>
                                         </a>
 
                                         <span className="text-gray-700 leading-none text-sm mb-2 ">{author.books_published} books published</span>
 
-                                        <div className="inline-flex items-center justify-center gap-4">
+                                        <div className="inline-flex items-center justify-center gap-4 flex-wrap">
                                             <a href="" className="pop_author_social-icon h-8 w-8 rounded-full flex items-center justify-center bg-gray-200 hover:bg-[#3b5999] hover:text-white transition delay-100 ease-in-out duration-300"><GrFacebookOption/></a>
                                             <a href="" className="pop_author_social-icon h-8 w-8 rounded-full flex items-center justify-center bg-gray-200 hover:bg-[#55acee] hover:text-white transition delay-100 ease-in-out duration-300"><GrTwitter/></a>
                                             <a href="" className="pop_author_social-icon h-8 w-8 rounded-full flex  items-center justify-center bg-gray-200 hover:text-white hover:bg-[#0077B5] transition delay-100 ease-in-out duration-300"><GrLinkedinOption/></a>
