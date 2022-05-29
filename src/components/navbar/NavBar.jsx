@@ -137,8 +137,26 @@ useEffect(()=>{
           title: 'Contact',
         },
         {
-          href: '/forum',
+          // href: '/forum',
           title: 'Our Forum',
+          submenu: [
+            {
+              title: "web design",
+              href: '/web design',
+
+              
+            },
+            {
+              title: "web development",
+              href: "/web-development",
+
+            },
+            {
+              title: "SEO",
+              href: "/SEO",
+
+            },
+          ]
         },
       ];
 

@@ -36,6 +36,16 @@ const MenuItems = ({items, depthLevel, locationName}) => {
   return (
     <li className='relative' key={items.title} ref={ref} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
         {items.submenu ? (
+          items.href ? (
+            <>
+              <a href={`${items.href}`} className={`flex text-sm p-5 text-white hover:text-white hover:bg-black/20 cursor-pointer items-center justify-start relative transition ease-in-out duration-300 ${items.href === locationName ? "active bg-black/20" : ""}`} aria-expanded={dropdown ? "true" : "false"} onClick={()=>setDropdown((prev) => !prev)}>
+              {items.title}{" "} <i className="fa fa-angle-down text-[9px] ml-2"></i>
+
+              </a>
+              {depthLevel > 0 ? <span>&raquo;</span> : <span className="arrow"></span>}
+              <Dropdown submenus={items.submenu} dropdown={dropdown} depthLevel={depthLevel}/>
+            </>
+            ) : (
             <>
             <button className={`flex text-sm p-5 text-white hover:text-white hover:bg-black/20 cursor-pointer items-center justify-start relative transition ease-in-out duration-300 ${items.href === locationName ? "active bg-black/20" : ""}`} aria-expanded={dropdown ? "true" : "false"} onClick={()=>setDropdown((prev) => !prev)}>
             {items.title}{" "} <i className="fa fa-angle-down text-[9px] ml-2"></i>
@@ -44,7 +54,7 @@ const MenuItems = ({items, depthLevel, locationName}) => {
             {depthLevel > 0 ? <span>&raquo;</span> : <span className="arrow"></span>}
             <Dropdown submenus={items.submenu} dropdown={dropdown} depthLevel={depthLevel}/>
             </>
-
+          )
         )
             : 
             (
