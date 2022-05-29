@@ -1,44 +1,9 @@
 import React from 'react'
 import { AiFillFacebook, AiOutlineFacebook } from 'react-icons/ai';
 import { GrFacebookOption, GrTwitter, GrLinkedinOption } from 'react-icons/gr';
+import { PopAuthors } from '../data';
 import './popularauthors.css'
-const PopAuthors = [
-    {
-        id: 1,
-        image: '/users/300_15.jpg',
-        name: 'Chris Holland',
-        books_published: 300,
-    },
-    {
-        id: 2,
-        image: '/users/300_17.jpg',
-        name: 'Mary Smith',
-        books_published: 30,
 
-    },
-    {
-        id: 3,
-        image: '/users/300_25.jpg',
-        name: 'Travis Carter',
-        books_published: 2000,
-
-    },
-    {
-        id: 4,
-        image: '/users/300_18.jpg',
-        name: 'Song Yu Jin',
-        books_published: 30,
-
-    },
-    {
-        id: 5,
-        image: '/users/300_7.jpg',
-        name: 'Allyson Witherers',
-        books_published: 30,
-
-    },
-    
-];
 
 
 const PopularAuthors = () => {

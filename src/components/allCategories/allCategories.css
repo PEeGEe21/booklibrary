@@ -1,0 +1,18 @@
+.categories-sidemenu {
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+  /* box-shadow: 0 0 17px 0 rgb(130 122 122 / 10%); */
+}
+.categories-sidemenu .categories-sidemenu-search{
+    padding: 15px 10px;
+}
+
+
+.categories-sidemenu li a {
+  /* display: block; */
+  padding: 15px 15px;
+  font-size: 14px;
+}
+
+.categories-sidemenu li + li {
+  border-top: 1px solid #e5e7eb;
+}

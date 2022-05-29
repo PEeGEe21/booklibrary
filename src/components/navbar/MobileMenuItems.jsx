@@ -54,7 +54,7 @@ const MobileMenuItems = ({items, depthLevel}) => {
         )
             : 
             (
-               <Link to="" className=" w-full block h-full py-3 px-2">
+               <Link to={`${items.href}`} className=" w-full block h-full py-3 px-2">
                                     {items.title}
                                 
                                     </Link> 

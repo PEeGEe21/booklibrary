@@ -1,34 +1,39 @@
-import React, { useEffect } from 'react'
-import { BiCartAlt } from 'react-icons/bi';
-import { AiOutlineShoppingCart, AiOutlineHeart } from 'react-icons/ai';
-import { BestSellingBooks } from '../data';
-import './bestselling.css'
-import LikeButton from '../likebutton/LikeButton';
+import React from 'react'
+import { BiCartAlt } from 'react-icons/bi'
+import { BestSellingBooks } from '../components/data'
+import Footer from '../components/footer/Footer'
+import LikeButton from '../components/likebutton/LikeButton'
+import NavBar from '../components/navbar/NavBar'
 
 const BestSelling = () => {
-const numberofStars = () =>{
-    const stars = 2;
-
-    for(let i = 0; i < stars ; i++){
-        stars++;
-    }
-    console.log(numberofStars)
-    return numberofStars;
-
-}
-
   return (
     <>
-        <section className="sectionspace">
-            <div className="container">
+    <NavBar/>
+
+        <div>
+            <div className=" h-full" style={{backgroundImage: 'url(/bgparallax-07.jpg)', backgroundPosition: 'center center', backgroundSize: 'cover'}}>
+                <div className="container py-7">
+                    <h3 className=" mb-5 text-[33px]">Best Selling</h3>
+
+                    <div>
+                        <ol className="breadcrumb mb-0 inline-flex gap-4 text-sm text-gray-500">
+                            <li className="breadcrumb-item"><a href="">Home</a></li>
+                            <li className="breadcrumb-item"><a href="">Library</a></li>
+                            <li className="breadcrumb-item active">Data</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container py-[80px]">
                 <div className="border-b flex items-center justify-between flex-row flex-wrap pb-6">
                     <div className="flex flex-col justify-start">
-                        <h5 className="mb-2 text-sm">Get our best selling</h5>
-                        <h1 className="text-2xl">Our Best Sellling Books</h1>
+                        <h5 className="mb-2 text-sm text-gray-600">Get our best selling</h5>
+                        <h1 className="text-[30px]">Our Best Sellling Books</h1>
                     </div>
 
                     <div className="mt-5 lg:mt-0">
-                        <a href="" className="rounded-full border p-3 px-5 text-sm w-full text-black">View All</a>
+                        {/* <a href="" className="rounded-full border p-3 px-5 text-sm w-full text-black">View All</a> */}
                     </div>
                 </div>
 
@@ -36,7 +41,7 @@ const numberofStars = () =>{
                     <div className="mt-6 lg:mt-6 py-5 lg:flex-1 ">
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
 
-                            {BestSellingBooks.slice(0,8).map((book, index)=>(
+                            {BestSellingBooks.map((book, index)=>(
                                 <div className=" singlebook relative rounded overflow-hidden border-r border-t border-b border-l border-gray-300 " key={book.id}>
                                 {/* <div> */}
                                     {/* <span className="absolute right-0">Add to wishlist</span> */}
@@ -83,7 +88,8 @@ const numberofStars = () =>{
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <Footer/>
     </>
   )
 }

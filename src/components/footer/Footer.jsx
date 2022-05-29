@@ -94,7 +94,7 @@ const Footer = () => {
                     <div className="lg:flex items-center justify-between z-10 md:mb-0 z-10">
                             <div className=" w-full max-w-md z-10 ">
                                 {/* <AiOutlineHeart /> justify-between flex-col md:flex-row <BsSearch className="h-full text-gray-400"/>*/}
-                                <h4 className="text-[30px] mb-4 leading-7">Sign Up for Our NewsLetter</h4>
+                                <h4 className="text-[26px] mb-4 leading-7">Sign Up for Our NewsLetter</h4>
 
                                 <h5 className="leading-5 font-normal text-[17px] text-gray-600">Don't worry, we promise we wont spam you!</h5>
 

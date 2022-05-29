@@ -1,5 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './navbar.css'
 import { BsSearch, BsEnvelope } from 'react-icons/bs';
 import { IoMdGlobe, IoMdHelpCircleOutline } from 'react-icons/io';
@@ -12,15 +12,23 @@ import MobileMenuItems from './MobileMenuItems';
 // import {Badge} from "@material-ui/core"
 
 
+
 const NavBar = () => {
 const [currencydropdown, setCurrencyDropdown] = useState(false);
 const [wishlistdropdown, setWishlistDropdown] = useState(false);
+const [userMenuDropdown, setUserMenuDropdown] = useState(false);
 const [cartdropdown, setCartDropdown] = useState(false);
 const [mobileDropdown, setMobileDropdown] = useState(false);
 const ref = useRef();
+const userRef = useRef();
 const cartref = useRef();
 const user = 'Praise';
 const depthLevel = 0;
+
+const location = useLocation();
+const locationName = location.pathname;
+// console.log(locationName, "locationnnnn")
+
 
 
 useEffect(()=>{
@@ -80,19 +88,18 @@ useEffect(()=>{
   }
 
 
-
       const menuItems = [
         {
           href: '/',
           title: 'Home',
         },
         {
-          href: '/',
+          href: '/our-library',
           title: 'Our Library',
         },
         {
-          href: '/all-categories',
-          title: 'All Categories',
+          href: '/categories',
+          title: 'Categories',
           submenu: [
             {
               title: "web design",
@@ -118,52 +125,20 @@ useEffect(()=>{
         },
         {
           href: '/best-selling',
-          title: 'Best Selling',
-          submenu: [
-            {
-              title: "web design",
-              href: '/web design',
-
-            },
-            {
-              title: "web development",
-              href: "/web-development",
-            },
-            {
-              title: "SEO",
-              href: "/SEO",
-            },
-          ]
+          title: 'Best Selling'
+          
         },
         {
-          href: '/about',
+          href: '/about-us',
           title: 'About Us',
         },
         {
-          href: '/Best Selling',
+          href: '/contact',
           title: 'Contact',
         },
         {
-          href: '/Forum',
+          href: '/forum',
           title: 'Our Forum',
-          submenu: [
-            {
-              title: "web design",
-              href: '/web design',
-
-              
-            },
-            {
-              title: "web development",
-              href: "/web-development",
-
-            },
-            {
-              title: "SEO",
-              href: "/SEO",
-
-            },
-          ]
         },
       ];
 
@@ -227,14 +202,18 @@ useEffect(()=>{
                             </div>
                         </div>
 
-                        <div>
-                            {user ? <button type="button" className="relative z-10 flex items-center p-2 px-4 text-sm text-gray-600  border border-transparent focus:outline-none bg-gray-100">
+                        <div className="h-full relative">
+                            {user ? 
+                            
+                            <button type="button" className={`userdropbtn relative z-10 flex items-center p-2 px-4 text-sm text-gray-600  border border-transparent focus:outline-none hover:bg-gray-100 rounded-md ${userMenuDropdown ? "show" : ""}`} onClick={()=>setUserMenuDropdown((prev) => !prev)} >
                                     <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
                                         <img src="/avatar-1.png" className="object-cover w-full h-full" alt="avatar"/>
                                         {/* <img src="" alt="" /> */}
                                     </div>
 
                                     <span className="mx-1">{user}</span>
+
+                                    <i className="fa fa-angle-down text-[9px] ml-2"></i>
 
                             </button>
                             : 
@@ -243,7 +222,24 @@ useEffect(()=>{
                                     <span className=" h-8 overflow-hidden flex items-center">Login / SignUp</span>
 
                             </Link>   
+
+                            
                         }
+
+                              {/* {user && */}
+                            
+
+                            <ul className={`userMenuDropdown shadow-md rounded-md ${userMenuDropdown ? "show" : ""}`}>
+                                {userDropdown.map((submenu, index)=>(
+                                  // <MenuItems items={submenu} key={index} depthLevel={depthLevel}/>
+                                  <li key={index} className="menu-items text-gray-600" >
+                                        <Link to="/#">{submenu.title}</Link>
+                                    </li>
+                                )
+                                
+                                )}
+                            </ul>
+                          {/* } */}
                             
                         </div>
                     </div>
@@ -306,8 +302,8 @@ useEffect(()=>{
                                       <span className="text-sm hidden md:block">$576.09</span>
                                     </button>
 
-                                    <div className={`border-t-2 border-rose-500 w-[330px] cartdropdown bg-white   p-[15px] mt-8 ${cartdropdown ? "show" : ""}`}   >
-                                      <div className="border-b border-gray-300 pb-3 pt-2" ref={cartref} >
+                                    <div className={`border-t-2 border-rose-500 w-[330px] cartdropdown bg-white   p-[15px] mt-8 ${cartdropdown ? "show" : ""}`}  ref={cartref} >
+                                      <div className="border-b border-gray-300 pb-3 pt-2"  >
                                        
 
                                       {/* {CartItems === null ? <div className="mb-3 mt-2">
@@ -350,7 +346,7 @@ useEffect(()=>{
                                           </div>
                                         </div>
                                         <div className="flex items-center justify-between pt-8 pb-2 gap-8">
-                                                <a href="" className="bg-[#77b748] text-sm text-white rounded-md p-3 px-4 w-1/2 h-10 flex items-center justify-center">View Cart</a>
+                                                <a href="/cart" className="bg-[#77b748] text-sm text-white rounded-md p-3 px-4 w-1/2 h-10 flex items-center justify-center">View Cart</a>
                                                 <a href="" className="p-3 px-4 text-sm text-gray-600 h-10 w-1/2 rounded-md border border-gray-300 mr-4 flex items-center justify-center focus:outline-none ">Checkout</a>
                                             </div>
                                         </div>
@@ -378,7 +374,7 @@ useEffect(()=>{
                         <ul className="flex flex-wrap">
                             {menuItems.map((items, index)=>(
                                 // const depthLevel = 0;
-                                <MenuItems items={items} key={index}/>
+                                <MenuItems items={items} key={index} locationName={locationName}/>
                             ))}
 
                         </ul>
