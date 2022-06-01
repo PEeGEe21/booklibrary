@@ -78,19 +78,19 @@ const BookDetailSidebar = () => {
               </div>
 
               <ul>
-                  {PopAuthors.slice(0, 4).map((item, index)=>(
+                  {PopAuthors.slice(0, 4).map((author, index)=>(
                       <li key={index} className="inline-flex items-center">
-                        <a href={`/author/${slugify(item.name)}`} className="w-28 h-28 trending-books">
-                          <img src={`${item.image}`} className="w-full h-full object-cover" alt=""/>
+                        <a href={`/author/${author.id}/${slugify(author.name)}`} className="w-28 h-28 trending-books">
+                          <img src={`${author.image}`} className="w-full h-full object-cover" alt=""/>
                         </a>
                         <div>
                           <h3>
-                            <a href={`/author/${slugify(item.name)}`} className=" transition ease-in-out duration-300">{item.name}
+                            <a href={`/author/${author.id}/${slugify(author.name)}`} className=" transition ease-in-out duration-300">{author.name}
                             </a>
                           </h3>
 
                           <h4>
-                            <span className="text-sm  text-gray-600">{item.books_published} books published
+                            <span className="text-sm  text-gray-600">{author.books_published} books published
                             </span>
                           </h4>
                         </div>

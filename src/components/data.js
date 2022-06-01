@@ -1,4 +1,80 @@
 
+export const AllBooks = [
+            {id: 1, image:"/books/img-01.jpg", title:"Social Flat design", price:200, deleted_price:500, onsale: true, status: 'in stock', author: {
+                id: 1,
+                image: '/users/300_7.jpg',
+                name: 'Udeh Praise',
+              }
+            },
+            {id: 2, image:"/books/img-02.jpg", title:"Screen Flat Design", price:200, deleted_price:500, status: 'in stock',author: {
+                id: 1,
+                image: '/users/300_7.jpg',
+                name: 'Samuel Cash',
+              }
+            },
+            {id: 3, image:"/books/img-03.jpg", title:"Electric Flat Design", price:200, deleted_price:500, onsale: true, status: 'in stock', author: {
+                id: 1,
+                image: '/users/300_7.jpg',
+                name: 'Alfred Pierce',
+              } 
+            },
+            {id: 4, image:"/books/img-04.jpg", title:"Eco Flat Design", price:200, deleted_price:500, onsale: true, status: 'in stock', author: {
+                id: 1,
+                image: '/users/300_7.jpg',
+                name: 'Peace Colt',
+              }
+            },
+            {id: 5, image:"/books/img-05.jpg", title:"Mill Flat Design", price:200, deleted_price:500, onsale: false, status: 'in stock', author: {
+                id: 1,
+                image: '/users/300_7.jpg',
+                name: 'Gregory Yu',
+              }
+            },
+            {id: 6, image:"/books/img-06.jpg", title:"Eco Flat Design 2", price:200, deleted_price:500, onsale: true, status: 'in stock', author: {
+                id: 1,
+                image: '/users/300_7.jpg',
+                name: 'Maakina Grace',
+              }
+            },
+            {id: 7, image:"/books/img-07.jpg", title:"Notes Flat Design", price:200, deleted_price:500, onsale: false, status: 'in stock', author: {
+                id: 1,
+                image: '/users/300_7.jpg',
+                name: 'Loveth Charles',
+              }
+            },
+            {id: 8, image:"/books/img-08.jpg", title:"Photo Flat Design", price:200, deleted_price:500, onsale: false, status: 'in stock', author: {
+                id: 1,
+                image: '/users/300_7.jpg',
+                name: 'James Cook',
+              }
+            },
+            {id: 9, image:"/books/img-01.jpg", title:"Photo Flat Design", price:200, deleted_price:500, onsale: false, status: 'in stock', author: {
+                id: 1,
+                image: '/users/300_7.jpg',
+                name: 'Margaret Smile',
+              }
+            },
+            {id: 10, image:"/books/img-05.jpg", title:"Photo Flat Design", price:200, deleted_price:500, status: 'in stock', onsale: false, author: {
+                id: 1,
+                image: '/users/300_7.jpg',
+                name: 'Anthony Levine',
+              }
+            },
+            {id: 11, image:"/books/img-02.jpg", title:"Photo Flat Design", price:200, deleted_price:500, status: 'in stock', onsale: false, author: {
+                id: 1,
+                image: '/users/300_7.jpg',
+                name: 'Luis Wild',
+              }
+            },
+            {id: 12, image:"/books/img-07.jpg", title:"Photo Flat Design", price:200, deleted_price:500, status: 'in stock',onsale: false, author: {
+                id: 1,
+                image: '/users/300_7.jpg',
+                name: 'James Gun',
+              }
+            },
+]
+
+
 export const BestSellingBooks = [
             {id: 1, image:"/books/img-01.jpg", title:"Social Flat design", author: 'Udeh Praise', price:200, deleted_price:500, onsale: true},
             {id: 2, image:"/books/img-02.jpg", title:"Screen Flat Design", author: 'Samuel Cash', price:200, deleted_price:500, },

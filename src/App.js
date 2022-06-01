@@ -35,7 +35,7 @@ function App() {
                 <Route path='/signup' element={<SignUp/>} />
                 <Route exact path="/our-library" element={<Library/>} />
                 <Route exact path="/authors" element={<Authors />}/>
-                <Route exact path="/author/:name" element={<AuthorDetail />}/> 
+                <Route exact path="/author/:id/:name" element={<AuthorDetail />}/> 
                 <Route path="/categories" element={<Categories />}>
                   <Route path=":id" element={<CategoryDetail/>}/>
                 </Route>

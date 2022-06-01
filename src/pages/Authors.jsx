@@ -99,7 +99,7 @@ const Authors = () => {
                                         {/* <span className="absolute right-0">Add to wishlist</span> */}
                                     {/* </div> */}
                                 {/* <button className="wish-button"><AiOutlineHeart className="w-full h-full"/></button> */}
-                                        <a href={`/author/${slugify(author.name)}`} className="">
+                                        <a href={`/author/${author.id}/${slugify(author.name)}`} className="">
                                             <div className="relative overflow-hidden all-authors">
                                                 <img src={`${author.image}`} alt="" className="w-full"/>
                                             </div>
