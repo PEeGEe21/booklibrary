@@ -93,7 +93,7 @@ const book =
                           </div>
 
 
-                            <div className="flex bg-[#f7f7f7] px-4 py-7">
+                            <div className="flex bg-[#f7f7f7] px-4 py-7 ">
                               <div className="w-2/4">
                                 <div className="h-22 w-24">
                                   <img src={`${book.author.image}`} className="w-full h-full object-cover rounded-full" alt=""/>

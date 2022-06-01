@@ -180,9 +180,9 @@ li.menu-item-has-children:hover > .mega-menu {
   transition: 200ms ease;
 }
 
-/* .userMenuDropdown li + li { */
-  /* border-top: 1px solid #dbdbdb; */
-/* } */
+.userMenuDropdown li + li { 
+  border-top: 1px solid #dbdbdb;
+}
 
 .cartdropdown {
   box-shadow: 0px 6px 12px rgb(0 0 0 / 18%);
@@ -257,6 +257,11 @@ li.menu-item-has-children:hover > .mega-menu {
   overflow-y: visible;
   transform: scale(1);
 }
+
+
+
+
+
 
 .mobile-menu-btn {
   display: flex;

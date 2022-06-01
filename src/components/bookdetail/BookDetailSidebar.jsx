@@ -27,7 +27,7 @@ const BookDetailSidebar = () => {
                       <li key={index}>
                           <Link to={`/categories/${item.name}`} className="flex items-center justify-between hover:bg-gray-100 text-gray-600 transition ease-in-out duration-300 ">{item.name}
 
-                          <i className="fa fa-angle-right dropdown-angle-icon text-[9px] ml-2"></i>
+                          <i className="fa fa-angle-right sidemenu-angle-icon text-[9px] ml-2"></i>
                           </Link>
                       </li>
                   ))}
@@ -35,7 +35,7 @@ const BookDetailSidebar = () => {
                         <li>
                           <Link to="/categories" className="flex items-center justify-between hover:bg-gray-100 text-gray-600 transition ease-in-out duration-300">More...
 
-                          <i className="fa fa-angle-right dropdown-angle-icon text-[9px] ml-2"></i>
+                          <i className="fa fa-angle-right sidemenu-angle-icon text-[9px] ml-2"></i>
                           </Link>
                       </li>
               </ul>

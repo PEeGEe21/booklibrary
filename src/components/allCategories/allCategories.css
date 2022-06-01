@@ -16,3 +16,57 @@
 .categories-sidemenu li + li {
   border-top: 1px solid #e5e7eb;
 }
+
+.sidemenu-angle-icon {
+  transform: rotate(0deg) !important;
+  transition: all .4s ease-in-out;
+
+}
+
+.sideBarCategory.show{
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    right: 0;
+}
+
+.sideBarCategory {
+    z-index: 1001;
+    position: fixed;
+    -webkit-overflow-scrolling: touch;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    -webkit-transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    width: 275px !important;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    right: -295px;
+    box-shadow: 0px 1px 9px -3px rgb(0 0 0 / 75%);
+
+}
+
+
+/* .sideBarCategory{
+    height: 100%;
+    right: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    margin-top: -100%;
+    transition: all 0.3s ease;
+
+} */
+
+/* .sideBarCategory.show{
+    height: 100%;
+    right: 0;
+
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+
+} */

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { CategoryItems } from '../components/data'
 import { Outlet } from 'react-router-dom'
@@ -18,6 +18,7 @@ import CategoryIndex from '../components/allCategories/CategoryIndex'
 
 const Categories = ({Children}) => {
 
+    const [sideBarCategory, setSideBarCategory] = useState(false)
 const location = useLocation();
 const locationName = location.pathname;
 
@@ -42,15 +43,36 @@ const locationName = location.pathname;
             <div className="container pt-[10px] pb-[30px] md:py-[60px]">
 
                 <div className="lg:flex py-12 ">
-                    <div className="block lg:hidden">
-                        <button className="px-4 bg-gray-400 h-10 flex items-center justify-center text-white shadow-md"><span className="mr-2">Menu</span> 
+                    <div className="block lg:hidden relative">
+                        <button className="px-4 bg-gray-400 h-10 flex items-center justify-center text-white shadow-md" onClick={()=>{setSideBarCategory((prev) => !prev)}}><span className="mr-2" >Menu</span> 
 
                             <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
                                   <path fillRule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
                               </svg>
 
                         </button>   
+
+                        <div className={` sideBarCategory ${sideBarCategory ? "show" : ""}`}>
+                            <div className="text-right mt-2  flex items-center justify-end">
+                                <button className="bg-blue-600 text-white h-8 flex items-center justify-center" onClick={()=>{setSideBarCategory(false)}} ><i className="fa fa-times text-right p-3 "></i></button>
+                            </div>
+                            <div className="py-4">
+                                <ul>
+                                    {CategoryItems.map((item, index)=>(
+                                        <li key={index}>
+                                            <Link to={item.id} className="flex items-center justify-between hover:bg-gray-100 text-gray-600 transition ease-in-out duration-300 py-3 px-2 text-sm">{item.name}
+
+                                            <i className="fa fa-angle-right sidemenu-angle-icon  text-[9px] ml-2"></i>
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                        </div>
                     </div>
+
+
                     <aside className=" categories-sidemenu w-full lg:w-1/4 bg-fuchsia-100 w-full overflow-auto h-[100%] hidden lg:block bg-[#f8f8f8]">
                         <div className="">
                             <nav>
@@ -66,7 +88,7 @@ const locationName = location.pathname;
                                         <li key={index}>
                                             <Link to={item.id} className="flex items-center justify-between hover:bg-gray-100 text-gray-600 transition ease-in-out duration-300">{item.name}
 
-                                            <i className="fa fa-angle-right dropdown-angle-icon text-[9px] ml-2"></i>
+                                            <i className="fa fa-angle-right sidemenu-angle-icon text-[9px] ml-2"></i>
                                             </Link>
                                         </li>
                                     ))}
