@@ -4,6 +4,7 @@ import { AiOutlineShoppingCart, AiOutlineHeart } from 'react-icons/ai';
 import { BestSellingBooks } from '../data';
 import './bestselling.css'
 import LikeButton from '../likebutton/LikeButton';
+import { slugify } from '../slugify';
 
 const BestSelling = () => {
 const numberofStars = () =>{
@@ -43,7 +44,7 @@ const numberofStars = () =>{
                                     <LikeButton />
                                 {/* </div> */}
                             {/* <button className="wish-button"><AiOutlineHeart className="w-full h-full"/></button> */}
-                                    <a href="" className="book-container">
+                                    <a href={`/book/${book.id}/${slugify(book.title)}`} className="book-container">
                                         <div className="book">
                                             <img src={`${book.image}`} alt="" className="w-full"/>
                                         </div>
@@ -67,7 +68,7 @@ const numberofStars = () =>{
                                                 }
                                         </div>
 
-                                        <a href="">
+                                        <a href={`/book/${book.id}/${slugify(book.title)}`}>
                                         <span className="book-title text-gray-900 text-[22px] mb-2">{book.title}</span></a>
 
                                         <span className="text-gray-700 leading-none text-sm mb-2 "> By: Udeh Praise</span>

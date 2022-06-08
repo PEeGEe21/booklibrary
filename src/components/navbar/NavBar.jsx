@@ -380,7 +380,8 @@ useEffect(()=>{
 
                         <div className="w-full block md:hidden mt-6">
                                 <form className="rounded-md flex items-center justify-center border border-gray-300 h-[50px]">
-                                    <input type="search" placeholder="search author, title" className="text-sm h-full block w-full px-4 py-2 text-gray-700 bg-white border-0 border-gray-200 rounded-md  focus:outline-none" />
+                                    <input type="search
+                                    " placeholder="search author, title" className="text-sm h-full block w-full px-4 py-2 text-gray-700 bg-white border-0 border-gray-200 rounded-md  focus:outline-none" />
                                     <button className="px-6 py-2 leading-5 text-md text-white transition-colors duration-200 transform  rounded-sm focus:outline-none  h-full border-0" type="submit"><BsSearch className="h-full text-gray-400"/></button>
                                 </form>
                             </div>

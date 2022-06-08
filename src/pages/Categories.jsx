@@ -86,7 +86,7 @@ const locationName = location.pathname;
                                 <ul>
                                     {CategoryItems.map((item, index)=>(
                                         <li key={index}>
-                                            <Link to={item.id} className="flex items-center justify-between hover:bg-gray-100 text-gray-600 transition ease-in-out duration-300">{item.name}
+                                            <Link to={`${item.id}/${item.name}`} className="flex items-center justify-between hover:bg-gray-100 text-gray-600 transition ease-in-out duration-300">{item.name}
 
                                             <i className="fa fa-angle-right sidemenu-angle-icon text-[9px] ml-2"></i>
                                             </Link>

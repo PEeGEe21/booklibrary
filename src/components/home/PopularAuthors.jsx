@@ -2,6 +2,7 @@ import React from 'react'
 import { AiFillFacebook, AiOutlineFacebook } from 'react-icons/ai';
 import { GrFacebookOption, GrTwitter, GrLinkedinOption } from 'react-icons/gr';
 import { PopAuthors } from '../data';
+import { slugify } from '../slugify';
 import './popularauthors.css'
 
 
@@ -18,7 +19,7 @@ const PopularAuthors = () => {
                     </div>
 
                     <div>
-                        <a href="" className="rounded-full border p-3 px-5 text-sm w-full text-black">View All</a>
+                        <a href="/authors" className="rounded-full border p-3 px-5 text-sm w-full text-black">View All</a>
                     </div>
                 </div>
 
@@ -32,7 +33,7 @@ const PopularAuthors = () => {
                                     {/* <span className="absolute right-0">Add to wishlist</span> */}
                                 {/* </div> */}
                             {/* <button className="wish-button"><AiOutlineHeart className="w-full h-full"/></button> */}
-                                    <a href="" className="pop_author-image-container">
+                                    <a href={`/author/${author.id}/${slugify(author.name)}`} className="pop_author-image-container">
                                         <div className="pop_author">
                                             <img src={`${author.image}`} alt="" className="w-full"/>
                                         </div>
@@ -41,7 +42,7 @@ const PopularAuthors = () => {
 
                                     <div className="px-2 py-2 mb-4 md:py-4 flex flex-col gap-2 text-center mt-0 lg:mt-2">
  
-                                        <a href="">
+                                        <a href={`/author/${author.id}/${slugify(author.name)}`}>
                                             <span className="book-title text-gray-900 text-lg mb-2">{author.name}</span>
                                         </a>
 

@@ -108,7 +108,7 @@ const Authors = () => {
 
                                         <div className="px-2 py-2 mb-4 md:py-4 flex flex-col gap-2 text-center mt-0 lg:mt-2">
     
-                                            <a href="">
+                                            <a href={`/author/${author.id}/${slugify(author.name)}`}>
                                                 <span className="book-title text-gray-900 text-lg mb-2">{author.name}</span>
                                             </a>
 

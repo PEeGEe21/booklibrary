@@ -2,6 +2,7 @@ import React from 'react'
 import { BiCartAlt } from 'react-icons/bi'
 import { NewReleaseBooks } from '../data'
 import LikeButton from '../likebutton/LikeButton'
+import { slugify } from '../slugify';
 import './newrelease.css';
 const NewRelease = () => {
   return (
@@ -36,7 +37,7 @@ const NewRelease = () => {
                                             {/* <LikeButton /> */}
                                         {/* </div> */}
                                     {/* <button className="wish-button"><AiOutlineHeart className="w-full h-full"/></button> */}
-                                            <a href="" className="new-book-container">
+                                            <a href={`/book/${book.id}/${slugify(book.title)}`} className="new-book-container">
                                                 <div className="new-book">
                                                     <img src={`${book.image}`} alt="" className="w-full"/>
                                                 </div>
@@ -60,7 +61,7 @@ const NewRelease = () => {
                                                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">Photography</span> */}
                                                 {/* <div className="saletagbox"><span className="saletag">sale</span></div> */}
 
-                                                <a href="">
+                                                <a href={`/book/${book.id}/${slugify(book.title)}`}>
                                                 <span className="book-title text-gray-900 text-lg mb-2">{book.title}</span></a>
 
                                                 <span className="text-gray-700 leading-none text-sm mb-2 "> By: Udeh Praise</span>

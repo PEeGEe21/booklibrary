@@ -4,6 +4,7 @@ import { GrFacebookOption, GrLinkedinOption, GrTwitter } from 'react-icons/gr'
 import { BestSellingBooks } from '../components/data'
 import Footer from '../components/footer/Footer'
 import NavBar from '../components/navbar/NavBar'
+import { slugify } from '../components/slugify'
 
 const AuthorDetail = ({demo}) => {
 
@@ -70,7 +71,13 @@ const AuthorDetail = ({demo}) => {
                         <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-3 py-7">
                             {BestSellingBooks.slice(0, 6).map((book, index)=>(
                                 <div key={book.id}>
-                                    <h3 className="text-gray-700 uppercase "><a href="#" className="block hover:underline">{book.title}</a></h3>
+                                    <a href={`/book/${book.id}/${slugify(book.title)}`} className="new-book-container">
+                                                <div className="new-book">
+                                                    <img src={`${book.image}`} alt="" className="w-full"/>
+                                                </div>
+                                            </a>
+
+                                    <h3 className="text-gray-700 uppercase "><a href={`/book/${book.id}/${slugify(book.title)}`} className="block hover:underline">{book.title}</a></h3>
                                     <span className="block mt-2 text-sm text-gray-600">By <a href="#" className="hover:underline">{book.author}</a></span>
                                     <a href="#" className="block mt-2 text-sm text-gray-600  hover:underline">Terms of order</a>
                                     <a href="#" className="block mt-2 text-sm text-gray-600  hover:underline">Terms of return</a>

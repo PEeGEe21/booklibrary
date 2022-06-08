@@ -3,6 +3,7 @@ import React from 'react'
 import { BiCartAlt } from 'react-icons/bi'
 import { FaSearchPlus} from 'react-icons/fa'
 import { AuthorsPickBooks } from '../data'
+import { slugify } from '../slugify';
 import './authorspick.css';
 
 
@@ -24,14 +25,14 @@ const AuthorsPick = () => {
                 
 
                         <div className="mt-6 lg:mt-0 lg:flex-1">
-                            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8">
+                            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8 scroll-test">
                               
 
 
 
                             {AuthorsPickBooks.sort(()=>Math.round(Math.random() * 1000)).slice(0, 4).map((book, index)=>(
                                              <div className=" authors-pick-book rounded-md overflow-hidden hover:shadow-lg transition duration-300 ease border  " key={book.id}>
-                                                <a href="" className="authors-pick-book-container rounded-t relative">
+                                                <a href={`/book/${book.id}/${slugify(book.title)}`} className="authors-pick-book-container rounded-t relative">
                                                     {/* <div className="auth-pick-book"> */}
                                                         <img src={`${book.image}`} alt="" className="w-full h-full "/>
                                                     {/* </div> */}
@@ -60,7 +61,7 @@ const AuthorsPick = () => {
                                                     
                                               
     
-                                                    <a href="">
+                                                    <a href={`/book/${book.id}/${slugify(book.title)}`}>
                                                     <span className="book-title text-gray-900 text-lg mb-2">{book.title}</span></a>
     
                                                     <span className="text-gray-700 leading-none text-sm mb-2 ">By: Udeh Praise</span>

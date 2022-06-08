@@ -37,7 +37,7 @@ function App() {
                 <Route exact path="/authors" element={<Authors />}/>
                 <Route exact path="/author/:id/:name" element={<AuthorDetail />}/> 
                 <Route path="/categories" element={<Categories />}>
-                  <Route path=":id" element={<CategoryDetail/>}/>
+                  <Route path=":id/:name" element={<CategoryDetail/>}/>
                 </Route>
 
 
