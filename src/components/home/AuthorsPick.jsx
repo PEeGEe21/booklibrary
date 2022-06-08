@@ -25,7 +25,7 @@ const AuthorsPick = () => {
                 
 
                         <div className="mt-6 lg:mt-0 lg:flex-1">
-                            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8 scroll-test">
+                            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8 scroll-container">
                               
 
 

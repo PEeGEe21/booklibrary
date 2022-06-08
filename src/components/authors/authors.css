@@ -1,9 +1,121 @@
-
-
-.all-authors img{
-    transition: 0.4s ease-in-out;
+.all-authors img {
+  transition: 0.4s ease-in-out;
 }
-.all-authors:hover img{
-    transition: 0.4s ease-in-out;
-    transform: scale(1.1);
+.all-authors:hover img {
+  transition: 0.4s ease-in-out;
+  transform: scale(1.1);
+}
+
+.scroll-container {
+}
+
+.scroll-container .new-book-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  perspective: 600px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  object-fit: cover;
+}
+
+@keyframes initAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(-30deg);
+  }
+}
+
+.scroll-container .new-book {
+  width: 180px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-30deg);
+  transition: 0.4s ease;
+  animation: 0.4s ease 0s 1 initAnimation;
+}
+
+/* .new-singlebook:hover .new-book{
+    transform: rotateY(0deg);
+
+} */
+
+.scroll-container .new-book > :first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 180px;
+  height: 200px;
+  transform: translateZ(25px);
+
+  /* background-color: #4e4e4e; */
+  border-radius: 0 2px 2px 0;
+  /* box-shadow: 5px 5px 10px #ccc; */
+
+  /* box-shadow: 0px 0 10px 10px rgb(230, 227, 227); */
+}
+
+.scroll-container .new-book img {
+  object-fit: cover;
+}
+
+.scroll-container .new-book::before {
+  position: absolute;
+  content: '';
+  background-color: white;
+  left: 0;
+  top: 3px;
+  width: 48px;
+  height: 192px;
+  transform: translateX(150px) rotateY(90deg);
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #f9f9f9 5%,
+    #fff 10%,
+    #f9f9f9 15%,
+    #fff 20%,
+    #f9f9f9 25%,
+    #fff 30%,
+    #f9f9f9 35%,
+    #fff 40%,
+    #f9f9f9 45%,
+    #fff 50%,
+    #f9f9f9 55%,
+    #fff 60%,
+    #f9f9f9 65%,
+    #fff 70%,
+    #f9f9f9 75%,
+    #fff 80%,
+    #f9f9f9 85%,
+    #fff 90%,
+    #f9f9f9 95%,
+    #fff 100%
+  );
+}
+
+.scroll-container .new-book::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 180px;
+  height: 200px;
+  transform: translateZ(-25px);
+  /* background-color: #01060f; */
+
+  background-color: #a5a5a5;
+  border-radius: 0 2px 2px 0;
+  /* box-shadow: -15px 0 30px 10px rgb(230, 227, 227); */
+}
+
+@media only screen and (max-width: 567px) {
+  .scroll-container .new-book-container {
+    justify-content: center;
+  }
 }
