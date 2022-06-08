@@ -119,7 +119,7 @@ const book =
                                   <p className="leading-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nisi facere vel eos? Pariatur, sequi. Ratione tempora quasi nostrum commodi ut sed perspiciatis delectus. Commodi eos officiis voluptatem voluptas, voluptatum quos tenetur cumque animi recusandae nam rem ea, ipsum aliquam. Dolore amet tenetur porro obcaecati soluta fugiat aspernatur nulla dicta!</p>
                                 </div>
 
-                                <a href={`/author/${book.author.id}/${slugify(book.author.name)}`} className={` w-1/4 h-10 py-3 bg-green-600 hover:bg-green-400 transition duration-300 ease-in-out hover:text-gray-800 text-white mt-4 flex items-center justify-center rounded-md text-sm relative view-author-btn`} >View Author</a>
+                                <a href={`/author/${book.author.id}/${slugify(book.author.name)}`} className={` w-2/4 md:w-1/4  h-10 py-3 bg-green-600 hover:bg-green-400 transition duration-300 ease-in-out hover:text-gray-800 text-white mt-4 flex items-center justify-center rounded-md text-sm relative view-author-btn`} >View Author</a>
                               </div>
                             </div>
                         </div>

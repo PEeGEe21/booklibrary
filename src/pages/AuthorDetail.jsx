@@ -21,6 +21,19 @@ const AuthorDetail = ({demo}) => {
     <>
     <NavBar/>
         <div>
+            <div className=" h-full" style={{backgroundImage: 'url(/bgparallax-07.jpg)', backgroundPosition: 'center center', backgroundSize: 'cover'}}>
+                <div className="container py-7">
+                    <h3 className=" mb-5 text-[33px]">Author's Information</h3>
+
+                    <div>
+                        <ol className="breadcrumb mb-0 inline-flex gap-4 text-sm text-gray-500">
+                            <li className="breadcrumb-item"><a href="">Home</a></li>
+                            <li className="breadcrumb-item"><a href="">Library</a></li>
+                            <li className="breadcrumb-item active">Data</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
             <div className="container">
             <div className="top-footer lg:flex py-[80px] ">
                     <aside className=" categories-sidemenu w-full lg:w-1/3 bg-fuchsia-100 w-full overflow-auto h-[100%] bg-[#f8f8f8]">
