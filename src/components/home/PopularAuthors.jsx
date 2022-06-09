@@ -25,7 +25,7 @@ const PopularAuthors = () => {
 
                 <div>
                     <div className="mt-3 lg:mt-6 py-5 lg:flex-1 ">
-                        <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
 
                         {PopAuthors.map((author, index)=>(
                                     <div className="popular-authors relative rounded overflow-hidden shadow-md " key={author.id}>
