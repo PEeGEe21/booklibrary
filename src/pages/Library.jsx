@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Footer from '../components/footer/Footer'
 import NavBar from '../components/navbar/NavBar'
 import { BiCartAlt } from 'react-icons/bi'
@@ -6,10 +6,33 @@ import { AllBooks, BestSellingBooks } from '../components/data'
 import LikeButton from '../components/likebutton/LikeButton'
 import '../components/library/library.css'
 import { slugify } from '../components/slugify'
+import axios from 'axios'
 
 const Library = () => {
     const [addBtn, setAddBtn ] = useState(false);
-    const [selectedBtn, setSelectedBtn] = useState()
+    const [selectedBtn, setSelectedBtn] = useState();
+    const [books, setBooks] = useState([]);
+    const [isLoading, setIsLoading] = useState();
+    
+
+    useEffect(()=>{
+        const getBooks = async ()=>{
+            setIsLoading(false)
+            try{
+                
+                const res = await axios.get( "https://www.googleapis.com/auth/books" );
+                    // const res = await axios.get( "http://localhost:8000/api/products/" );
+                    
+                    setBooks(res.data)
+                console.log(books)
+                
+            }catch(err){}
+            // setIsLoading(false);
+            
+        };
+        
+        getBooks()
+    }, [books])
 
     const handleAddClick = (id) =>{
         console.log(id)

@@ -7,9 +7,24 @@ import { GiShoppingCart } from 'react-icons/gi';
 import { AiOutlineShoppingCart, AiOutlineHeart } from 'react-icons/ai';
 import { BiCartAlt, BiTrash } from 'react-icons/bi';
 import MenuItems from './MenuItems';
+import {menuList} from '../menuList';
 import { CartItems } from '../data';
 import MobileMenuItems from './MobileMenuItems';
-// import {Badge} from "@material-ui/core"
+
+import Badge from '@mui/material/Badge';
+import {ShoppingCartOutlined } from '@mui/icons-material';
+import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+
+// import * as React from 'react';
+// import MailIcon from '@mui/icons-material/Mail';
+
+// export default function SimpleBadge() {
+//   return (
+//     <Badge badgeContent={4} color="primary">
+//       <MailIcon color="action" />
+//     </Badge>
+//   );
+// }
 
 
 
@@ -29,7 +44,8 @@ const location = useLocation();
 const locationName = location.pathname;
 // console.log(locationName, "locationnnnn")
 
-
+const cartQuantity = 2;
+const wishListQuantity = 2;
 
 useEffect(()=>{
   const handler = (e) => {
@@ -88,77 +104,7 @@ useEffect(()=>{
   }
 
 
-      const menuItems = [
-        {
-          href: '/',
-          title: 'Home',
-        },
-        {
-          href: '/our-library',
-          title: 'Our Library',
-        },
-        {
-          href: '/categories',
-          title: 'Categories',
-          submenu: [
-            {
-              title: "web design",
-              href: '/web design',
-
-              
-            },
-            {
-              title: "web development",
-              href: "/web-development",
-
-            },
-            {
-              title: "SEO",
-              href: "/SEO",
-
-            },
-          ]
-        },
-        {
-          href: '/authors',
-          title: 'Authors',
-        },
-        {
-          href: '/best-selling',
-          title: 'Best Selling'
-          
-        },
-        {
-          href: '/about-us',
-          title: 'About Us',
-        },
-        {
-          href: '/contact',
-          title: 'Contact',
-        },
-        {
-          // href: '/forum',
-          title: 'Our Forum',
-          submenu: [
-            {
-              title: "web design",
-              href: '/web design',
-
-              
-            },
-            {
-              title: "web development",
-              href: "/web-development",
-
-            },
-            {
-              title: "SEO",
-              href: "/SEO",
-
-            },
-          ]
-        },
-      ];
+      
 
 
   const currencyDropdownItems = [
@@ -284,7 +230,10 @@ useEffect(()=>{
                             <div className="flex items-center justify-between gap-6">
                                 <div className="relative">
                                   <button className="flex items-center gap-1" onClick={()=>setWishlistDropdown((prev) => !prev)} >
+                                  <Badge badgeContent={wishListQuantity} color="secondary">
+                                                  {/* <ShoppingCartOutlined/> */}
                                     <AiOutlineHeart className="text-2xl"/> 
+                                                </Badge>
                                     <span className="text-sm hidden md:block">Wishlist</span>
                                   </button>
 
@@ -315,8 +264,12 @@ useEffect(()=>{
                                 <div className="relative border-l border-gray-300 pl-5">
                                     <button className="flex items-center gap-1" onClick={()=>setCartDropdown((prev) => !prev)}  ref={cartref}>
                                     {/* <GiShoppingCart/> */}
+                                        <Badge badgeContent={cartQuantity} color="primary">
+                                                  <ShoppingCartOutlined/>
+                                                </Badge>
+                                        
 
-                                      <AiOutlineShoppingCart className="text-2xl"/>
+                                      {/* <AiOutlineShoppingCart className="text-2xl"/> */}
                                       <span className="text-sm hidden md:block">$576.09</span>
                                     </button>
 
@@ -391,7 +344,7 @@ useEffect(()=>{
                 <div className="container">
                     <nav className="flex items-center justify-start hidden md:block">
                         <ul className="flex flex-wrap">
-                            {menuItems.map((items, index)=>(
+                            {menuList.map((items, index)=>(
                                 // const depthLevel = 0;
                                 <MenuItems items={items} key={index} locationName={locationName}/>
                             ))}
@@ -421,7 +374,7 @@ useEffect(()=>{
                               <nav>
 
                               <ul className=" bg-white">
-                                  {menuItems.map((items, index)=>(
+                                  {menuList.map((items, index)=>(
                                       // const depthLevel = 0;
                                       <MobileMenuItems items={items} key={index} depthLevel={depthLevel}/>
                                      

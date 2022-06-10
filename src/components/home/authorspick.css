@@ -209,6 +209,11 @@
     flex-shrink: 0;
     width: 100%;
   }
+  .scroll-container .popular-authors {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+  }
 }
 
 .scroll-container::-webkit-scrollbar {
