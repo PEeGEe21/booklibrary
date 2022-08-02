@@ -156,7 +156,7 @@ const Login = () => {
                                 </div>
     
                                 <div className="flex justify-center items-center mt-6">
-                                    <button className="px-6 py-2 leading-5 transition-colors duration-200 transform border border-gray-700 text-gray-700 hover:text-gray-700 focus:outline-none focus:bg-gray-600 w-full h-10 " >Continue</button>
+                                    <button className="px-6 py-2 leading-5 transition-colors duration-200 transform border border-gray-400 hover:border-gray-700 text-gray-700 hover:text-gray-700 focus:outline-none focus:bg-gray-600 w-full h-10 " >Continue</button>
                                 </div>
     
                                 <div className="flex items-center justify-between mt-6">

@@ -1,5 +1,5 @@
-.saletagbox {
-    width: 100%;
+.lib-singlebook .saletagbox {
+    /* width: auto; */
     float: left;
     margin: 0 0 3px;
     position: relative;
@@ -7,11 +7,11 @@
     margin-bottom: 0.5rem;
   }
   
-  .saletag {
+  .lib-singlebook .saletag {
     background: #f16945;
   }
-  .saletag {
-    float: left;
+  .lib-singlebook .saletag {
+    float: right;
     color: #fff;
     padding: 0 5px;
     font-size: 10px;
@@ -21,11 +21,11 @@
     border-radius: 4px 0 0 4px;
   }
   
-  .saletag:before {
+  .lib-singlebook .saletag:after {
     border-color: #f16945;
   }
   
-  .saletag:before {
+  .lib-singlebook .saletag:after {
     top: 0;
     width: 0;
     height: 0;
@@ -41,7 +41,7 @@
   .lib-singlebook .lib-book-container{
       display: flex;
       align-items: center;
-      justify-content: start;
+      justify-content: flex-start;
       perspective: 600px;
       padding-top: 40px;
       padding-bottom: 30px;
@@ -149,6 +149,10 @@
   .cat::after{
       content: ',';
   }
+
+  .cat:last-child::after{
+    content: '';
+}
   
   .addToCartBtn.clicked {
     animation: click 300ms;

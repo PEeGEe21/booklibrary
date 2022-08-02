@@ -1,5 +1,6 @@
 import React from 'react'
 import { BiCartAlt } from 'react-icons/bi'
+import Rating from '../Rating'
 import './featured.css'
 
 const Featured = () => {
@@ -23,7 +24,10 @@ const Featured = () => {
 
                                 <div><h3 className="featured-title"><a href="">Home Economics</a></h3></div>
                                 <span className="featured-author text-muted">By: <a href="" className="hover:text-blue-500 transition delay-100 ease-in-out duration-300 ">Udeh Praise</a></span>
-                                <span>rating</span>
+                                <span className="text-gray-700 leading-none text-sm mb-2 ">
+
+                                                        <Rating value={4}></Rating>
+                                                    </span>
                             </div>
                             <div className="text-center flex flex-col ">
                                 <span className="featured-price"><ins>$3456</ins> <del>$9505</del></span>

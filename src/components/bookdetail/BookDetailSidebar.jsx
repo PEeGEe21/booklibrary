@@ -25,7 +25,7 @@ const BookDetailSidebar = () => {
               <ul className="book-details-sidebarCat">
                   {CategoryItems.slice(0, 7).map((item, index)=>(
                       <li key={index}>
-                          <Link to={`/categories/${item.name}`} className="flex items-center justify-between hover:bg-gray-100 text-gray-600 transition ease-in-out duration-300 ">{item.name}
+                          <Link to={`/categories/${item.id}/${item.name}`} className="flex items-center justify-between hover:bg-gray-100 text-gray-600 transition ease-in-out duration-300 ">{item.name}
 
                           <i className="fa fa-angle-right sidemenu-angle-icon text-[9px] ml-2"></i>
                           </Link>

@@ -11,6 +11,8 @@ import Featured from '../components/home/Featured'
 import AuthorsPick from '../components/home/AuthorsPick'
 import Testimonial from '../components/home/Testimonial'
 import PopularAuthors from '../components/home/PopularAuthors'
+import {host, addBook} from '../apiCalls';
+
 
 const Home = () => {
   return (

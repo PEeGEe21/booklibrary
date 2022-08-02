@@ -1,10 +1,36 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { BiCartAlt } from 'react-icons/bi'
 import { NewReleaseBooks } from '../data'
 import LikeButton from '../likebutton/LikeButton'
 import { slugify } from '../slugify';
 import './newrelease.css';
+import axios from 'axios';
+import {latestBooks} from '../../apiCalls'
+
 const NewRelease = () => {
+
+    const [books, setBooks] = useState([]);
+    const [isLoading, setIsLoading] = useState();
+    
+
+    useEffect(()=>{
+        const getBooks = async ()=>{
+            setIsLoading(false)
+            try{
+                
+                const res = await axios.get( `${latestBooks}`);
+                    // const res = await axios.get( "http://localhost:8000/api/products/" );
+                    
+                    setBooks(res.data.books)
+                // console.log(books)
+                
+            }catch(err){}
+            // setIsLoading(false);
+            
+        };
+        
+        getBooks()
+    }, [books])
   return (
     <>
         <section className="sectionspace newRelease">
@@ -29,17 +55,18 @@ const NewRelease = () => {
 
                     <div className="mt-6 lg:mt-0 lg:flex-1">
                         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-3">
-                        
-                        {NewReleaseBooks.sort(()=>Math.round(Math.random() * 1000)).slice(0, 3).map((book, index)=>(
-                                        <div className=" new-singlebook relative rounded overflow-hidden  " key={book.id}>
+                        {/* .sort(()=>Math.round(Math.random() * 1000)).slice(0, 3) */}
+                        {books.slice(0, 3).map((book, index)=>(
+                                        <div className=" new-singlebook relative rounded overflow-hidden  " key={book._id}>
                                         {/* <div> */}
                                             {/* <span className="absolute right-0">Add to wishlist</span> */}
                                             {/* <LikeButton /> */}
                                         {/* </div> */}
                                     {/* <button className="wish-button"><AiOutlineHeart className="w-full h-full"/></button> */}
-                                            <a href={`/book/${book.id}/${slugify(book.title)}`} className="new-book-container">
+                                            <a href={`/book/${book._id}/${slugify(book.title)}`} className="new-book-container">
                                                 <div className="new-book">
-                                                    <img src={`${book.image}`} alt="" className="w-full"/>
+                                                    {/* <img src={`${book.image}`} alt="" className="w-full"/> */}
+                                                    <img src={`${book.isbookcoverset === false ? "/books/img-04.jpg" : `${book.bookcover}`}`} alt="" className="w-full"/>
                                                 </div>
                                             </a>
                                             {/* <a href="" className="book-container">
@@ -48,10 +75,14 @@ const NewRelease = () => {
                                                 </div>
                                             </a> */}
                                             <div className="px-2 py-1 flex flex-row gap-2 flex-wrap border-b">
-                                                
-                                                <span className="cat py-1 text-xs font-semibold text-gray-700 mr-1">Fun</span>
+                                                {book.category.map((cat, index)=>(
 
-                                                <span className="py-1 text-xs font-semibold text-gray-700 mr-1">Horror</span>
+                                                    <span className={`${book.category >= 2 ? "" : "cat"} py-1 text-xs font-semibold text-gray-700 mr-1`} key={cat._id} id={cat._id}>{cat.name}</span>
+                                                ))}
+                                                
+                                                {/* <span className="cat py-1 text-xs font-semibold text-gray-700 mr-1">Fun</span>
+
+                                                <span className="py-1 text-xs font-semibold text-gray-700 mr-1">Horror</span> */}
                                             </div>
 
                                             <div className="px-2 py-4 mb-4 flex flex-col gap-2 text-left">
@@ -61,10 +92,14 @@ const NewRelease = () => {
                                                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">Photography</span> */}
                                                 {/* <div className="saletagbox"><span className="saletag">sale</span></div> */}
 
-                                                <a href={`/book/${book.id}/${slugify(book.title)}`}>
+                                                <a href={`/book/${book._id}/${slugify(book.title)}`}>
                                                 <span className="book-title text-gray-900 text-lg mb-2">{book.title}</span></a>
 
-                                                <span className="text-gray-700 leading-none text-sm mb-2 "> By: Udeh Praise</span>
+                                                
+                                                <a href={`/author/${book.author._id}/${slugify(book.author.name)}`}>
+                                                <span className="text-gray-700 leading-none text-sm mb-2 "> By: {book.author.name}</span></a>
+
+                                                
                                                 {/* <span className="price">{book.price} <del className="text-sm">{book.deleted_price}</del></span> */}
                                             </div>
 

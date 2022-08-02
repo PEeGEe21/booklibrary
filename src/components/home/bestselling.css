@@ -1,4 +1,4 @@
-.saletagbox {
+.bestselling_home .saletagbox {
   width: 100%;
   float: left;
   margin: 0 0 3px;
@@ -6,10 +6,10 @@
   min-height: 16px;
 }
 
-.saletag {
+.bestselling_home .saletag {
   background: #f16945;
 }
-.saletag {
+.bestselling_home .saletag {
   float: left;
   color: #fff;
   padding: 0 5px;
@@ -20,11 +20,11 @@
   border-radius: 4px 0 0 4px;
 }
 
-.saletag:before {
+.bestselling_home .saletag:before {
   border-color: #f16945;
 }
 
-.saletag:before {
+.bestselling_home .saletag:before {
   top: 0;
   width: 0;
   height: 0;
@@ -142,4 +142,7 @@
 .cat::after{
     content: ',';
 }
-
+.cat:last-child::after{
+    content: '';
+}
+    

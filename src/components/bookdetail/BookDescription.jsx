@@ -1,14 +1,23 @@
 import React from 'react'
 import { GrFacebookOption, GrLinkedinOption, GrTwitter } from 'react-icons/gr'
+import Rating from '../Rating'
 import { slugify } from '../slugify'
 
 const BookDescription = ({book}) => {
+    console.log(book, "description book")
   return (
       <>
     <div className="w-full md:px-3">
         {/* <div> */}
             <div>
-                <h3 className="border-b pb-3 text-[16px] mb-6"><a href={`/categories/${slugify(book.category)}`}>{book.category}</a></h3>
+                <h3 className="border-b pb-3 text-[16px] mb-6">
+                    {book.category.map((cat, index)=>(
+                        
+
+                    <a href={`/categories/${cat._id}/${slugify(cat.name)}`} className={`${book.category.length >= 2 ? "cat mr-1" : ""}`} key={cat._id}>{cat.name}</a>
+                    ))}
+                    
+                    </h3>
 
                 <div className="info-header">
                     <div className="saletagbox">
@@ -20,7 +29,7 @@ const BookDescription = ({book}) => {
 
                     <h1 className="text-[30px] py-2">{book.title}</h1>
                     <h4 className="pb-2">By: <span className="hover:underline"><a href="">{book.author.name}</a></span></h4>
-                    <span className="pb-3">rating</span>
+                    <span className="pb-3"><Rating value={3} /></span>
 
 
                 </div>
@@ -47,15 +56,18 @@ const BookDescription = ({book}) => {
                     <ul className="book-detail-table">
                         <li>
                             <span>Format</span>
-                            <span>Hardback</span>
+                            <span>
+                                {book.format.name}
+                                
+                        </span>
                         </li>
                         <li>
                             <span>Pages</span>
-                            <span>528 pages</span>
+                            <span>{book.num_of_pages} pages</span>
                         </li>
                         <li>
                             <span>Dimensions</span>
-                            <span>153 x 234 x 43mm | 758g</span>
+                            <span>{book.dimensions}</span>
                         </li>
                         <li>
                             <span>Publication Date</span>
@@ -67,7 +79,7 @@ const BookDescription = ({book}) => {
                         </li>
                         <li>
                             <span>Language</span>
-                            <span>English</span>
+                            <span>{book.language}</span>
                         </li>
                         <li>
                             <span>Illustrations note</span>
@@ -75,7 +87,7 @@ const BookDescription = ({book}) => {
                         </li>
                         <li>
                             <span>ISBN10</span>
-                            <span>1234567890</span>
+                            <span>{book.isbn}</span>
                         </li>
                         <li>
                             <span>ISBN13</span>
@@ -83,7 +95,11 @@ const BookDescription = ({book}) => {
                         </li>
                         <li>
                             <span>Other Fomats</span>
-                            <span>CD-Audio, Paperback, E-Book</span>
+                            <span>{book.other_formats.map((otformats, index)=>(
+                        
+
+                        <a href={`/categories/${otformats._id}/${slugify(otformats.name)}`} className={`${book.other_formats.length >= 2 ? "cat mr-1" : ""}`} key={otformats._id}>{otformats.name}</a>
+                        ))}</span>
                         </li>
                     </ul>
                 </div>

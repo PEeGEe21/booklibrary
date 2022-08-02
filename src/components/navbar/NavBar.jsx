@@ -45,7 +45,7 @@ const locationName = location.pathname;
 // console.log(locationName, "locationnnnn")
 
 const cartQuantity = 2;
-const wishListQuantity = 2;
+const wishListQuantity = 0;
 
 useEffect(()=>{
   const handler = (e) => {
@@ -118,7 +118,8 @@ useEffect(()=>{
 
   const userDropdown = [
     {
-      title: 'Profile'
+      title: 'Profile',
+      link: '/profile'
     },
     {
       title: 'Settings'
@@ -197,7 +198,7 @@ useEffect(()=>{
                                 {userDropdown.map((submenu, index)=>(
                                   // <MenuItems items={submenu} key={index} depthLevel={depthLevel}/>
                                   <li key={index} className="menu-items text-gray-600" >
-                                        <Link to="/#">{submenu.title}</Link>
+                                        <Link to={`${submenu.link ? `${submenu.link}` : "/#"}`}>{submenu.title}</Link>
                                     </li>
                                 )
                                 
@@ -209,9 +210,10 @@ useEffect(()=>{
                     </div>
                 </div>
             
-            <div className="py-7 md:py-10">
+            <div className="py-5 md:py-7">
                 <div className="container">
-
+                {/* 
+                 */}
 
                         <div className="flex items-center justify-between">
                             <div className="logo">

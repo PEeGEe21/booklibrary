@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { BsSearch } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { BestSellingBooks, CategoryItems, PopAuthors } from '../components/data'
@@ -11,17 +11,46 @@ import BookDetailSidebar from '../components/bookdetail/BookDetailSidebar'
 import BookDetailMain from '../components/bookdetail/BookDetailMain'
 import BookDescription from '../components/bookdetail/BookDescription'
 import { GrFacebookOption, GrLinkedinOption, GrTwitter } from 'react-icons/gr'
+import { useDispatch, useSelector } from 'react-redux';
+import {getBooks, getSingleBook} from '../redux/apiCalls'
+import { useLocation } from 'react-router-dom';
+
 
 const BookDetail = () => {
 
-const book = 
-    {
-      id: 1, image:"/books/img-01.jpg", title:"Social Flat design", price:43.02, deleted_price:50.30, onsale: true, category: 'horror', status: 'in stock', author_image:'/users/300_7.jpg',  author: {
-        id: 1,
-        image: '/users/300_7.jpg',
-        name: 'Udeh Praise',
-      }
-    }
+  const location = useLocation();
+    const id = (location.pathname.split("/")[2]);
+    console.log(id)
+
+    // const singleCategory = useSelector((state) => state.category.categories.find((category)=> category.name === categoryName));
+    
+    // const onUpdate = (e) => {
+    //     e.preventDefault();
+    //     const category = {
+    //         name: name, 
+    //         image:image,
+    //         description:description,
+
+    //     }
+    //     updateCategory(singleCategory.id, category, dispatch)
+    // } ;
+
+  const dispatch = useDispatch();
+    const book = useSelector((state) => state.singlebook.book.book)
+    console.log(book)
+
+    useEffect(()=>{
+      getSingleBook(id, dispatch)
+    }, [id, dispatch])
+
+// const book = 
+//     {
+//       id: 1, image:"/books/img-01.jpg", title:"Social Flat design", price:43.02, deleted_price:50.30, onsale: true, category: 'horror', status: 'in stock', author_image:'/users/300_7.jpg',  author: {
+//         id: 1,
+//         image: '/users/300_7.jpg',
+//         name: 'Udeh Praise',
+//       }
+//     }
 
   
 
@@ -96,7 +125,7 @@ const book =
                             <div className="flex bg-[#f7f7f7] px-4 py-7 md:flex-row flex-col ">
                               <div className="w-2/4">
                                 <div className="h-22 w-24">
-                                  <img src={`${book.author.image}`} className="w-full h-full object-cover rounded-full" alt=""/>
+                                  <img src={`${book.author.avatarImage}`} className="w-full h-full object-cover rounded-full" alt=""/>
                                 </div>
 
                               </div>
@@ -119,7 +148,7 @@ const book =
                                   <p className="leading-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nisi facere vel eos? Pariatur, sequi. Ratione tempora quasi nostrum commodi ut sed perspiciatis delectus. Commodi eos officiis voluptatem voluptas, voluptatum quos tenetur cumque animi recusandae nam rem ea, ipsum aliquam. Dolore amet tenetur porro obcaecati soluta fugiat aspernatur nulla dicta!</p>
                                 </div>
 
-                                <a href={`/author/${book.author.id}/${slugify(book.author.name)}`} className={` w-2/4 md:w-1/4  h-10 py-3 bg-green-600 hover:bg-green-400 transition duration-300 ease-in-out hover:text-gray-800 text-white mt-4 flex items-center justify-center rounded-md text-sm relative view-author-btn`} >View Author</a>
+                                <a href={`/author/${book.author._id}/${slugify(book.author.name)}`} className={` w-2/4 md:w-1/4  h-10 py-3 bg-green-600 hover:bg-green-400 transition duration-300 ease-in-out hover:text-gray-800 text-white mt-4 flex items-center justify-center rounded-md text-sm relative view-author-btn`} >View Author</a>
                               </div>
                             </div>
                         </div>

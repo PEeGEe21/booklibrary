@@ -60,26 +60,28 @@ const BestSelling = () => {
                                         <span className="py-1 text-xs font-semibold text-gray-700 mr-1">Horror</span>
                                     </div>
 
-                                    <div className="px-2 py-4 mb-4 flex flex-col gap-2">
+                                    <div className="px-2 py-4 flex flex-col gap-2">
                                         
                                         {/* <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">Photography</span>
 
                                         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">Photography</span> */}
-                                        <div className="saletagbox">
+                                        {/* <div className="saletagbox">
                                             {book.onsale && 
                                             
                                                 <span className="saletag">sale</span>
                                                 }
-                                        </div>
+                                        </div> */}
 
                                         <a href="">
                                         <span className="book-title text-gray-900 text-[22px] mb-2">{book.title}</span></a>
 
                                         <span className="text-gray-700 leading-none text-sm mb-2 "> By: Udeh Praise</span>
                                         <span className="price">$2444 <del className="text-sm">$4443</del></span>
+
+                                        <button className="flex items-center justify-center px-3 py-3 text-xl bg-[#47ab3c] ease-in-out duration-300 text-white hover:text-[#47ab3c]/100 hover:bg-white border-[#77b748] border-[1px]"><span className="text-sm  ">Read More</span></button>
                                     </div>
 
-                                    <button className="flex items-center justify-center  px-3 py-3 text-xl w-full border-gray-200 border-t hover:bg-[#77b748] m-0 transition delay-100 ease-in-out duration-300 hover:text-white text-gray-600 "> <BiCartAlt/><span className="text-sm font-semibold">Add to Cart</span></button>
+                                    {/* <button className="flex items-center justify-center  px-3 py-3 text-xl w-full border-gray-200 border-t hover:bg-[#77b748] m-0 transition delay-100 ease-in-out duration-300 hover:text-white text-gray-600 "> <BiCartAlt/><span className="text-sm font-semibold">Add to Cart</span></button> */}
                                 
                             </div>
                             ))}

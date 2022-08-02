@@ -40,13 +40,13 @@ const BookDetailMain = ({book}) => {
         <div>
 
             <div className="h-42">
-                <img src={`${book.image}`} alt="" className="w-full h-full object-cover"/>
+                <img src={`${book.bookcover}`} alt="" className="w-full h-full object-cover"/>
             </div>
 
             <div className="py-4">
                 <div className="flex gap-3 items-center mb-4">
                     <ins  className="text-[30px]" style={{textDecoration: 'none'}}>$<span>{book.price}</span></ins>
-                    <del className="text-[22px]">$<span>{book.deleted_price}</span></del>
+                    <del className="text-[22px]">$<span>{book.oldprice}</span></del>
                 </div>
 
                 <ul>
@@ -68,7 +68,7 @@ const BookDetailMain = ({book}) => {
                     <div className="w-full flex justify-evenly  py-4 h-16">
                         <button className={`w-1/5 bg-transparent border border-gray-400 text-[18px] h-full rounded-md  py-5 flex items-center justify-center btn-Animated minusBtn transition-200 duration-300 ease-in-out ${minusBtn ? "clicked shadow-md " : ""}`}  onClick={()=>handleQuantity("dec")} onAnimationEnd={() => setMinusBtn(false)} ><IoMdRemove/></button>
 
-                            <input type="text" className="w-1/2 focus:outline-none border border-gray-400  py-5 text-center rounded-md text-gray-900 " value={count}/>
+                            <input type="text" className="w-1/2 focus:outline-none border border-gray-400  py-5 text-center rounded-md text-gray-900 " value={count} readOnly/>
 
                         <button className={`w-1/5 bg-transparent border border-gray-400 text-[18px] py-5 rounded-md flex items-center justify-center btn-Animated addBtn transition-200 duration-300 ease-in-out ${addBtn ? "clicked shadow-md " : ""}`}  onClick={()=>handleQuantity("inc")} onAnimationEnd={() => setAddBtn(false)}><IoMdAdd/></button>
                     </div>

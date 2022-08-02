@@ -24,6 +24,8 @@ import BestSelling from './pages/BestSelling';
 import AboutUs from './pages/AboutUs';
 import Forum from './pages/Forum';
 import Contact from './pages/Contact';
+import Profile from './pages/Profile';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   return (
@@ -49,6 +51,9 @@ function App() {
                 <Route exact path="/about-us" element={<AboutUs />}/>
                 <Route exact path="/contact" element={<Contact />}/>
                 <Route exact path="/forum" element={<Forum />}/>
+                <Route exact path="/profile" element={<Profile />}/>
+                <Route path="*" element={<ErrorPage/>} />,
+
                 
             
 

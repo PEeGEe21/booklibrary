@@ -81,7 +81,7 @@ const AuthorDetail = ({demo}) => {
                                 <h3 className="text-[22px]">Books of Author</h3>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-3 py-7 scroll-container">
+                        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-3 py-7 scroll-container pb-5 md:py-0">
                             {BestSellingBooks.slice(0, 6).map((book, index)=>(
                                 <div key={book.id} className="scroll-box">
                                     <a href={`/book/${book.id}/${slugify(book.title)}`} className="new-book-container">

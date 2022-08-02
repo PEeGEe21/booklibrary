@@ -3,6 +3,7 @@ import React from 'react'
 import { BiCartAlt } from 'react-icons/bi'
 import { FaSearchPlus} from 'react-icons/fa'
 import { AuthorsPickBooks } from '../data'
+import Rating from '../Rating';
 import { slugify } from '../slugify';
 import './authorspick.css';
 
@@ -25,7 +26,7 @@ const AuthorsPick = () => {
                 
 
                         <div className="mt-6 lg:mt-0 lg:flex-1">
-                            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8 scroll-container">
+                            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8 scroll-container pb-5 md:py-0">
                               
 
 
@@ -65,7 +66,11 @@ const AuthorsPick = () => {
                                                     <span className="book-title text-gray-900 text-lg mb-2">{book.title}</span></a>
     
                                                     <span className="text-gray-700 leading-none text-sm mb-2 ">By: Udeh Praise</span>
-                                                    <span className="text-gray-700 leading-none text-sm mb-2 ">rating</span>
+                                                    <span className="text-gray-700 leading-none text-sm mb-2 ">
+
+                                                        <Rating value={1}></Rating>
+                                                    </span>
+
 
                                                     <button className=" w-full rounded-full h-12  text-black/70 mt-2 flex items-center justify-center transition delay-100 ease-in-out duration-300 border border-gray-400 hover:bg-blue-400 hover:text-white hover:border-blue-400 text-sm"><BiCartAlt className="mr-2"/> Add to Cart</button>
                                                 </div>
