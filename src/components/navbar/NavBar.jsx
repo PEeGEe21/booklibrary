@@ -342,7 +342,7 @@ useEffect(()=>{
                             </div>
                 </div>
                 </div>
-            <div className="bg-[#77b748] navigation-area relative">
+            <div className="bg-[#77b748] navigation-area relative sticky">
                 <div className="container">
                     <nav className="flex items-center justify-start hidden md:block">
                         <ul className="flex flex-wrap">

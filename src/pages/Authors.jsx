@@ -113,7 +113,7 @@ const Authors = () => {
                                 
                                 <>
 
-{PopAuthors.map((author, index)=>(
+                                {PopAuthors.map((author, index)=>(
                                     <div className="popular-authors relative rounded overflow-hidden shadow-md " key={author.id}>
                                     {/* <div> */}
                                         {/* <span className="absolute right-0">Add to wishlist</span> */}
